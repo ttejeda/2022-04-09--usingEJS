@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="assets/style.css" type="text/css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <% if(NUMBER % 2 == 0) {%> <%# Condición para comprobar si el número recibido en NUMBER. %>
+            <h1>El número <%= NUMBER %> es par</h1>
+            <% for(var i=1; i <= NUMBER*2; i++) { %> <%# Si es par, hace una lista con el doble de elementos del número que se recibió. %>
+                <li>
+                    <%= i %>
+                </li>
+            <% } %>
+        <% } else { %>
+            <h1>El número <%= NUMBER %> es impar</h1>
+            <% for(var i=1; i <= NUMBER; i++) { %> <%# Si es impar, hace una lista con el tamaño del número recibido. %>
+                <li>
+                    <%= i %>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+</body>
+</html>

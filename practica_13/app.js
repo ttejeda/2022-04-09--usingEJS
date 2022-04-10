@@ -18,7 +18,11 @@ app.get('/api', function (req, res){
 });
 
 app.get('/person/:id', function (req, res){
-    res.render('person', {ID: req.params.id}); // Renderizará person.ejs y le enviamos el valor que debe de tomar ID
-}); // En views/person.ejs se recibe un valor especial llamado ID, en la línea anterior se paso el valor de ID mediante el route handler.
+    res.render('person', {ID: req.params.id});
+});
+
+app.get('/number/:number', function (req, res){
+    res.render('number', {NUMBER: req.params.number}); // Le enviamos el valor 'number' a 'NUMBER'.
+}); // Renderiza la página 'numbers'.
 
 app.listen(port);
